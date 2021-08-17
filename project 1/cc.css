@@ -1,0 +1,118 @@
+
+body{
+    background-color: teal;
+}
+
+#test{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 195, 255);
+    margin: auto;
+    top: 250px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: #17171754 0px 3px 15px 0px;
+                border-radius: 5px;
+}
+div#test.active{
+    background-color: indianred;
+}
+div#test.active::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    top: 45px;
+    transform: rotate(50deg);
+    background-color: white;
+    animation-name: example;
+    transition: 1s ease-out;
+}
+div#test g {
+    opacity: 1;
+    transition: .2s ease-out;
+}
+div#test.active g {
+opacity: 0;
+}
+div#test.active::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    top: 45px;
+    transform: rotate(-50deg);
+    background-color: white;
+    animation-name: example;
+transition: 1s ease-out;
+}
+@keyframes example {
+    0%   { transform: rotate(0deg);}
+    25%  {    transform: rotate(-15deg);
+    }
+    50%  {    transform: rotate(-25deg);
+    }
+    100% {    transform: rotate(-50deg);
+    }
+  }
+  @keyframes example1 {
+    0%   { transform: rotate(0deg);}
+    25%  {    transform: rotate(15deg);
+    }
+    50%  {    transform: rotate(25deg);
+    }
+    100% {    transform: rotate(50deg);
+    }
+  }
+
+ 
+#test::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    top: 30px;
+    left: 20px;
+    background-color: white;
+    animation-name: ex1;
+    transition: 1s ease-out;
+
+}
+@keyframes ex1 {
+    0%   { transform: rotate(-50deg)}
+    25%  {    transform: rotate(-25deg);
+    }
+    50%  {    transform: rotate(-15deg);
+    }
+    100% {    transform: rotate(0deg);
+    }
+  }
+g{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    bottom: 45px;
+    left: 20px;
+    background-color: rgb(255, 255, 255);
+}
+#test::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    top: 70px;
+    left: 20px;
+    background-color: white;
+    animation-name: ex2;
+    transition: 1s ease-out;
+}
+@keyframes ex2 {
+    0%   { transform: rotate(50deg)}
+    25%  {    transform: rotate(25deg);
+    }
+    50%  {    transform: rotate(15deg);
+    }
+    100% {    transform: rotate(0deg);
+    }
+  }
